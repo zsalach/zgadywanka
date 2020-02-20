@@ -7,16 +7,17 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Gra za dużo za mało");
+            Console.WriteLine("Gra za dużo, za mało");
 
             //1.  komputer losuje.
-
-            Random los = new Random(); // deklaruję zmienną los i przypisuje do typu Random jednocześnie tworzę obiekt.
+#region losowanie
+            var los = new Random(); // deklaruję zmienną los i przypisuje do typu Random jednocześnie tworzę obiekt.
             int wylosowana = los.Next(1, 100+1);  // losuje z przedziału 
-           // Console.WriteLine(wylosowana);
+#if DEBUG
+            Console.WriteLine(wylosowana);
+#endif
             Console.WriteLine("Wylosowano liczbę od 1 do 100. \nOdgadnij ją");
-            // dopuki nie odgadniesz
-
+#endregion
             Boolean a = true;
             while(a)
             {
@@ -50,6 +51,7 @@ namespace ConsoleApp
                 //Console.WriteLine("Koniec gry");
             }
             Console.WriteLine("Koniec gry");
+            Console.ReadLine(true);
         }
     }
 }
