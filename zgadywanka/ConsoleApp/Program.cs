@@ -51,7 +51,6 @@ namespace ConsoleApp
                 //Console.WriteLine("Koniec gry");
             }
             Console.WriteLine("Koniec gry");
-            Console.ReadLine(true);
         }
     }
 }
